@@ -13,7 +13,7 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --dark-bc-color: #2f303a;
-  --button-bc-color: #f5f4fa;
+  --secondary-bc-color: #f5f4fa;
   --light-gray-color: #ececec;
 }
 
@@ -25,16 +25,15 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-
-  margin: 0;
 }
 
-/* убирает маркеры в списках */
+
+
+/*? УТИЛИТЫ */
 .list {
   list-style: none;
 }
 
-/* Убирает подчеркивания в ссылках */
 .link {
   text-decoration: none;
 }
@@ -45,7 +44,9 @@ body {
   padding: 0 15px;
 }
 
-/* HEADER */
+
+
+/*? HEADER */
 .header {
   border-top: 1px solid var(--light-gray-color);
   border-bottom: 1px solid var(--light-gray-color);
@@ -62,7 +63,13 @@ body {
   align-items: center;
 }
 
-/* LOGO */
+.header-logo {
+	margin-right: 93px;
+}
+
+
+
+/*? LOGO */
 .logo {
   color: #000000;
 
@@ -72,7 +79,7 @@ body {
   line-height: 1.19;
   text-decoration: none;
 
-  margin-right: 93px;
+  display: inline-block;
 }
 
 .logo > span {
@@ -131,7 +138,9 @@ body {
   color: var(--accent-color);
 }
 
-/* HERO */
+
+
+/*? HERO */
 .hero {
   background-color: var(--dark-bc-color);
 
@@ -157,7 +166,9 @@ body {
   margin-bottom: 30px;
 }
 
-/* BUTTON */
+
+
+/*? BUTTON */
 .button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -173,7 +184,9 @@ body {
   padding: 10px 32px;
 }
 
-/* section */
+
+
+/*? section */
 .section-title {
   color: var(--title-text-color);
 
@@ -183,7 +196,9 @@ body {
   text-align: center;
 }
 
-/* Особенности */
+
+
+/*? Особенности */
 .section.peculiarities {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -203,9 +218,9 @@ body {
 }
 
 .peculiarities-list > .item {
-	width: calc((100% - 3 * 30px) / 4);
-	/* width: 270px; */
-	/* margin-right: 30px; */
+  width: calc((100% - 3 * 30px) / 4);
+  /* width: 270px; */
+  /* margin-right: 30px; */
 }
 
 .peculiarities-list .title {
@@ -226,7 +241,78 @@ body {
   margin-bottom: 0;
 }
 
-/* Наша команда */
+
+
+/*? ЧЕМ МЫ ЗАНИМАЕМСЯ */
+.section.activities {
+  padding-bottom: 88px;
+}
+
+.activities .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* Список активностей */
+.activities-list {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  outline: 1px solid tomato;
+}
+
+.activities-list > .item {
+	width: calc((100% - 2 * 30px) / 3);
+}
+
+.activities-list img {
+  display: block;
+  
+}
+
+
+
+/*? Наша команда */
+.section.team {
+  background-color: var(--secondary-bc-color);
+
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team .section-title {
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+/* Список команды */
+.team-list {
+  display: flex;
+  column-gap: 30px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  outline: 1px solid tomato;
+}
+
+.team-list > .item {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  width: calc((100% - 3 * 30px) / 4);
+  padding-bottom: 30px;
+}
+
+.team-list img {
+  display: block;
+}
+
 .team-list .title {
   color: var(--title-text-color);
 
@@ -234,27 +320,44 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-/* footer */
+
+
+/*? FOOTER */
 .footer {
   background-color: var(--dark-bc-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
   color: var(--primary-white-color);
+
+  margin-bottom: 20px;
 }
 .footer-address {
   color: var(--primary-white-color);
 
   font-style: normal;
   line-height: 1.7;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 9px;
 }
 
 .footer-link {
@@ -268,12 +371,17 @@ body {
   color: var(--accent-color);
 }
 
+
+
+
+
+
 /*!  PORTFOLIO */
 
-/* filter */
+/*? filter */
 .filter .radio-button {
   color: var(--title-text-color);
-  background-color: var(--button-bc-color);
+  background-color: var(--secondary-bc-color);
 
   font-family: inherit;
   font-weight: 500;
@@ -287,7 +395,9 @@ body {
   background-color: var(--accent-color);
 }
 
-/* Примеры работ */
+
+
+/*? Примеры работ */
 .works-list .title {
   color: var(--title-text-color);
 
