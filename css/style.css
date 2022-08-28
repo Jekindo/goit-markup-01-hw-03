@@ -27,7 +27,17 @@ body {
   letter-spacing: 0.03em;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 
 /*? УТИЛИТЫ */
 .list {
@@ -44,7 +54,10 @@ body {
   padding: 0 15px;
 }
 
-
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /*? HEADER */
 .header {
@@ -64,10 +77,8 @@ body {
 }
 
 .header-logo {
-	margin-right: 93px;
+  margin-right: 93px;
 }
-
-
 
 /*? LOGO */
 .logo {
@@ -89,9 +100,6 @@ body {
 /* Site-nav */
 .site-nav {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
 }
 
 .site-nav > .item:not(:last-child),
@@ -116,9 +124,6 @@ body {
 /* contacts-nav */
 .contacts-list {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
 }
 
 .contacts-list .link {
@@ -138,8 +143,6 @@ body {
   color: var(--accent-color);
 }
 
-
-
 /*? HERO */
 .hero {
   background-color: var(--dark-bc-color);
@@ -148,8 +151,6 @@ body {
 
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .hero-title {
@@ -162,11 +163,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  margin-top: 0;
   margin-bottom: 30px;
 }
-
-
 
 /*? BUTTON */
 .button {
@@ -184,8 +182,6 @@ body {
   padding: 10px 32px;
 }
 
-
-
 /*? section */
 .section-title {
   color: var(--title-text-color);
@@ -196,14 +192,7 @@ body {
   text-align: center;
 }
 
-
-
 /*? Особенности */
-.section.peculiarities {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
 .section.peculiarities .section-title {
   display: none;
 }
@@ -212,9 +201,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .peculiarities-list > .item {
@@ -230,26 +216,19 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 
-  margin-top: 0;
   margin-bottom: 10px;
 }
 
 .peculiarities-list .text {
   line-height: 1.7;
-
-  margin-top: 0;
-  margin-bottom: 0;
 }
-
-
 
 /*? ЧЕМ МЫ ЗАНИМАЕМСЯ */
 .section.activities {
-  padding-bottom: 88px;
+  padding-top: 0;
 }
 
 .activities .section-title {
-  margin-top: 0;
   margin-bottom: 50px;
 }
 
@@ -257,45 +236,28 @@ body {
 .activities-list {
   display: flex;
   gap: 30px;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  outline: 1px solid tomato;
 }
 
 .activities-list > .item {
-	width: calc((100% - 2 * 30px) / 3);
+  width: calc((100% - 2 * 30px) / 3);
 }
 
 .activities-list img {
   display: block;
-  
 }
-
-
 
 /*? Наша команда */
 .section.team {
   background-color: var(--secondary-bc-color);
-
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .team .section-title {
-	margin-top: 0;
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 /* Список команды */
 .team-list {
   display: flex;
   column-gap: 30px;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  outline: 1px solid tomato;
 }
 
 .team-list > .item {
@@ -329,12 +291,7 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-
-  margin-top: 0;
-  margin-bottom: 0;
 }
-
-
 
 /*? FOOTER */
 .footer {
@@ -371,22 +328,36 @@ body {
   color: var(--accent-color);
 }
 
-
-
-
-
-
 /*!  PORTFOLIO */
+.portfolio .section-title {
+  display: none;
+}
 
 /*? filter */
+.filter {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
 .filter .radio-button {
   color: var(--title-text-color);
   background-color: var(--secondary-bc-color);
+  border: none;
+  border-radius: 4px;
 
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 6px 22px;
+}
+
+.filter .radio-button:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter .radio-button:hover,
@@ -395,9 +366,27 @@ body {
   background-color: var(--accent-color);
 }
 
-
-
 /*? Примеры работ */
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.works-list > .item {
+  flex-basis: calc((100% - 2 * 30) / 3);
+}
+
+.works-list img {
+  display: block;
+}
+
+.item-body {
+  border: 1px solid var(--light-gray-color);
+
+  padding: 20px 24px;
+}
+
 .works-list .title {
   color: var(--title-text-color);
 
@@ -405,6 +394,8 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
 }
 
 .works-list .text {
